@@ -6,3 +6,18 @@ services:
         image: loc05st/hello:latest
         ports:
             - 4000:4000
+    postgres:
+        image: postgres
+        restart: on-failure
+        environment:
+            - POSTGRES_USER=postgresdocker
+            - POSTGRES_PASSWORD=1234567890
+            - PGDATA=/var/lib/postgresql/data/pgdata
+            - POSTGRES_DB=rms
+        volumes:
+            - ./postgres_data:/var/lib/postgresql
+        ports:
+            - 5432:5432
+networks:
+
+

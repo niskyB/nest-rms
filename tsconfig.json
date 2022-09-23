@@ -9,7 +9,7 @@
         "target": "es2017",
         "sourceMap": true,
         "outDir": "./dist",
-        "baseUrl": "./src",
+        "baseUrl": "./",
         "incremental": true,
         "skipLibCheck": true,
         "resolveJsonModule": true,
@@ -19,6 +19,5 @@
                 "cacheBetweenTests": false
             }
         ]
-    },
-    "include": ["src"]
+    }
 }

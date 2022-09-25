@@ -5,6 +5,7 @@ import { StatusCodes } from 'http-status-codes';
 import { JoiValidatorPipe } from '../pipes';
 import { UsersCreatRequestPayload, vUsersCreatRequestPayload } from '../payload/request';
 import { UserService } from '../services/user.service';
+
 @ApiTags('Users')
 @ApiBearerAuth()
 @Controller('users')

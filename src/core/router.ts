@@ -13,7 +13,7 @@ import { winstonLogger } from '../services';
 
 export function router(app: INestApplication) {
     app.use(cookieParser());
-
+    app.setGlobalPrefix('/api');
     app.enableCors({ origin: config.CLIENT_URL, credentials: true });
 
     const configSwagger = new DocumentBuilder()

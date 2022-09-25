@@ -1,4 +1,6 @@
+import { ErrorMessageDetailEnum, ErrorMessageEnum } from '../../core';
+
 export interface ErrorBody {
-    errorMessage: string;
-    errorDetail: string;
+    errorMessage: ErrorMessageEnum;
+    errorDetail: ErrorMessageDetailEnum;
 }

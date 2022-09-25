@@ -11,8 +11,8 @@ export const config = {
     DB_PORT: db.postgres.port || 5432,
 
     JWT_SECRET_KEY: jwt_secret || 'this is secret',
-    CLIENT_URL: (server_url || 'http://localhost:3000').split(','),
-    SERVER_URL: client_url || 'http://localhost:4000',
+    CLIENT_URL: (client_url || 'http://localhost:3000').split(','),
+    SERVER_URL: server_url || 'http://localhost:4000',
 
     PORT: Number(process.env.PORT) || 4000,
     NODE_ENV: process.env.NODE_ENV || monoEnum.NODE_ENV_MODE.DEVELOPMENT,

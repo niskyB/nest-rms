@@ -7,7 +7,7 @@ import helmet from 'helmet';
 import * as moment from 'moment';
 import { monoEnum, monoLogger } from 'mono-utils-core';
 import * as morgan from 'morgan';
-import { constant } from '.';
+import { AppConstant } from '.';
 import { config } from './config';
 import { winstonLogger } from '../services';
 
@@ -17,8 +17,8 @@ export function router(app: INestApplication) {
     app.enableCors({ origin: config.CLIENT_URL, credentials: true });
 
     const configSwagger = new DocumentBuilder()
-        .setTitle('mono-nestjs-kit')
-        .setDescription('The APIs for mono-nestjs-kit')
+        .setTitle('RMS API')
+        .setDescription('The APIs for RMS')
         .setVersion('1.0')
         .addBearerAuth({ name: 'Authentication', bearerFormat: 'Bearer', scheme: 'Bearer', in: 'Header', type: 'http' })
         .build();
@@ -49,7 +49,7 @@ export function router(app: INestApplication) {
                 reqIp,
                 reqDate,
             });
-            monoLogger.log(constant.NS.HTTP, content);
+            monoLogger.log(AppConstant.HTTP, content);
         }),
     );
 
